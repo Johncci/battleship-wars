@@ -35,4 +35,17 @@ letters_to_numbers ={
     'Z': 25
 }
 
+def create_ships():
+    pass
+
+def get_ship_location():
+    pass
+
+def count_hit_ships():
+    pass
+
+
+
+
+
     
