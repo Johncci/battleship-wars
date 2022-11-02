@@ -1,13 +1,15 @@
 from random import randint
 
 def create_grids():
-    pass
+    HIDDEN_BOARD = [[" "] * for x in range()]
+    GUESS_ BOARD = [[" "] * for i in range()]
+
 
 def print_board(board, game_size):
-    pass
+    letters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
 
 letters_to_numbers ={
-    'A': O,
+    'A': 0,
     'B': 1,
     'C': 2,
     'D': 3,
@@ -34,6 +36,10 @@ letters_to_numbers ={
     'Y': 24,
     'Z': 25
 }
+
+game_size = 0
+
+while game_size == 0 or game_size <= 7 or game_size > 26:
 
 def create_ships():
     pass
