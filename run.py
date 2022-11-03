@@ -24,7 +24,7 @@ def print_board(board, game_size):
               10 else row_number, "|".join(row)))
         row_number += 1
 
-letters_to_numbers ={
+letters_to_numbers = {
     'A': 0,
     'B': 1,
     'C': 2,
@@ -68,11 +68,11 @@ while game_size == 0 or game_size <= 7 or game_size > 26:
 def create_ships(board, game_size):
     for ship in range(5):
         ship_row, ship_column = randint(0, game_size-1), randint(0, game_size-1)
-        while board[ship_road][ship_column] == "X":
+        while board[ship_row][ship_column] == "X":
             ship_row, ship_column = randint(0, game_size-1), randint(0, game_size-1)
         board[ship_row][ship_column] = "X"
 
-def get_ship_location():
+def get_ship_location(game_size):
     row = 0
     while row < 1 or row > game_size:
         try:
@@ -81,7 +81,7 @@ def get_ship_location():
                 print("Not a relevant choice, please select a valid row")
 
         except ValueError:
-            print("Not a valid choice, please select a valid row")
+            print("Not a relevant choice, please select a valid row")
 
     column = input("Enter the column of the ship: ").upper()
     while column not in list("ABCDEFGHIJKLMNOPQRSTUVWXYZ") or len(column) == 0:
@@ -90,8 +90,13 @@ def get_ship_location():
     return int(row) -1, letters_to_numbers[column]
 
 
-def count_hit_ships():
-    pass
+def count_hit_ships(board):
+    count = 0
+    for row in board:
+        for column in row:
+            if column == "X":
+                count += 1
+    return count
 
 
 
