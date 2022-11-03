@@ -1,31 +1,66 @@
-![CI logo](https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png)
+<h1 align="center">Battleship down game</h1>
 
-Welcome John_considine,
 
-This is the Code Institute student template for deploying your third portfolio project, the Python command-line project. The last update to this file was: **August 17, 2021**
+## <U>**Introduction**</U>
 
-## Reminders
+Battleship down is a game in which two players try to find the others players battleship on a grid based game board. The player has to try guess the sqaures that contain the computers battleships before the computer finds the players battleships. The winner is the decided by whoever sinks all the oppenents battleships first.
 
-* Your code must be placed in the `run.py` file
-* Your dependencies must be placed in the `requirements.txt` file
-* Do not edit any of the other files or your code may not deploy properly
 
-## Creating the Heroku app
+[View battleship down here]()
 
-When you create the app, you will need to add two buildpacks from the _Settings_ tab. The ordering is as follows:
 
-1. `heroku/python`
-2. `heroku/nodejs`
+## <u>**Gameplay**</u> ##
 
-You must then create a _Config Var_ called `PORT`. Set this to `8000`
+Battleship down is an enjoybale game of chance. In my version of the game, the player enters their name and then the location of their ships. The computers ships are automatically generated. The players ships are represented by a # sign and the computers ships are not visible. The player will enter co_ordinates in the terminal and the selected square will be represented by an X. Hits are indicated by a *. 
 
-If you have credentials, such as in the Love Sandwiches project, you must create another _Config Var_ called `CREDS` and paste the JSON into the value field.
 
-Connect your GitHub repository and deploy as normal.
 
-## Constraints
+## <u>**Features**</u> ##
 
-The deployment terminal is set to 80 columns by 24 rows. That means that each line of text needs to be 80 characters or less otherwise it will be wrapped onto a second line.
+* **User board creation**
+ * The player decides at the start of the game where they want to place their ships. They will be able to view the location of their ships throughout the game.
 
------
-Happy coding!
+ ![Player board]()
+
+* **Random board generation**
+ * The computers board will be randomly generated and hidden from view.
+
+ ![Computer board]()
+
+* **Gameplay features**
+ * The screen will display both boards and show the hits and misses for the duration of the game. The scores will be displayed on the bottom of the screen. Their will be a message displayed for each turn showing the result of the computers guess and the players guess. This will update after each turn to show the relevant data depending on the choices.
+
+ ![Gameplay screen]()
+
+ * **Input validation**
+
+ * The following are the messages which will be displayed when coordinates are selected in error.
+
+  * You cannot enter coordinates outside of the gamer grid.
+
+  * You must enter numbers.
+
+  * You cannot enter the same guess twice.
+
+  ![Error messages]()
+
+  ## <u>**Testing**</u> ##
+
+  The project was tested throughout the build in the terminal and also by the following methods.
+
+   * The code was tested in the PEP8 linter and displayed no issues.
+   * The game was testeed by entering incorrect coordinates, by entering input that was not a number and also by entering a guess in the same space for a second time.
+   * 
+
+* **Bugs**
+
+I encountered the following bugs during the build of this project.
+
+ * 
+
+## <u>**Deployment**</u> ##
+
+
+## <u>**Credits**</u> ##
+
+## <u>**Acknowledgments**</u> 

@@ -1,7 +1,9 @@
 from random import randint
 
-def create_grids():
+def create_grids(game_size):
+    global HIDDEN_BOARD
     HIDDEN_BOARD = [[" "] * game_size for x in range(game_size)]
+    global GUESS_BOARD
     GUESS_BOARD = [[" "] * game_size for i in range(game_size)]
 
 # credit second half of this function in readme
@@ -63,18 +65,33 @@ while game_size == 0 or game_size <= 7 or game_size > 26:
         print("Invalid input, please enter a grid size from 8 and 26!")
 
 
-def create_ships():
+def create_ships(board, game_size):
     for ship in range(5):
         ship_row, ship_column = randint(0, game_size-1), randint(0, game_size-1)
-        pass
+        while board[ship_road][ship_column] == "X":
+            ship_row, ship_column = randint(0, game_size-1), randint(0, game_size-1)
+        board[ship_row][ship_column] = "X"
 
 def get_ship_location():
-    pass
+    row = 0
+    while row < 1 or row > game_size:
+        try:
+            row = int(input("Enter the row of the ship: "))
+            if row < 1 or row > game_size:
+                print("Not a relevant choice, please select a valid row")
+
+        except ValueError:
+            print("Not a valid choice, please select a valid row")
+
+    column = input("Enter the column of the ship: ").upper()
+    while column not in list("ABCDEFGHIJKLMNOPQRSTUVWXYZ") or len(column) == 0:
+        print("Not a relevant choice, please select a valid column")
+        column = input("Enter the column of the ship: ").upper()
+    return int(row) -1, letters_to_numbers[column]
+
 
 def count_hit_ships():
     pass
-
-create_grids(game_size)
 
 
 
