@@ -9,11 +9,11 @@ def create_grids(game_size):
 # credit second half of this function in readme
 def print_board(board, game_size):
     letters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
-    top_labels = " "
-    seperator = " "
+    top_labels = "   "
+    seperator = "  "
     for letter in range(game_size):
-        top_labels += letters[letter]
-        seperator = "+-"
+        top_labels += letters[letter] + " "
+        seperator += "+-" 
 
     print(top_labels)
     print(seperator)
@@ -83,11 +83,12 @@ def get_ship_location(game_size):
         except ValueError:
             print("Not a relevant choice, please select a valid row")
 
-    column = input("Enter the column of the ship: ").upper()
-    while column not in list("ABCDEFGHIJKLMNOPQRSTUVWXYZ") or len(column) == 0:
+    column = input("Enter the column of the ship: ").upper().strip()
+    columns = list("ABCDEFGHIJKLMNOPQRSTUVWXYZ")[: game_size]
+    while column not in columns or len(column) == 0:
         print("Not a relevant choice, please select a valid column")
         column = input("Enter the column of the ship: ").upper()
-    return int(row) -1, letters_to_numbers[column]
+    return int(row) - 1, letters_to_numbers[column]
 
 
 def count_hit_ships(board):
@@ -103,7 +104,7 @@ create_ships(HIDDEN_BOARD, game_size)
 
 turns = 30
 while turns > 0:
-    print("guess a battleship location")
+    print("Guess a battleship location!")
     print_board(GUESS_BOARD, game_size)
     row, column = get_ship_location(game_size)
     GUESS = GUESS_BOARD[row][column]
