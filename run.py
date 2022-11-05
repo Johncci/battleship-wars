@@ -98,6 +98,32 @@ def count_hit_ships(board):
                 count += 1
     return count
 
+create_grids(game_size)
+create_ships(HIDDEN_BOARD, game_size)
+
+turns = 30
+while turns > 0:
+    print("guess a battleship location")
+    print_board(GUESS_BOARD, game_size)
+    row, column = get_ship_location(game_size)
+    GUESS = GUESS_BOARD[row][column]
+    if GUESS == '-' or GUESS == 'X':
+        print("You already guessed this location")
+    elif HIDDEN_BOARD[row][column] == 'X':
+        print("Hit")
+        GUESS_BOARD[row][column] = 'X'
+        turns -= 1
+    else:
+        print('You Missed')
+        GUESS_BOARD[row][column] = '-'
+        turns -= 1
+        if count_hit_ships(GUESS_BOARD) == 5:
+            print("Congratulations, you win!")
+            break
+    print("You have " + str(turns) + " turns left.")
+    if turns == 0:
+        print("you ran out of turns, better luck next time.")
+
 
 
 
