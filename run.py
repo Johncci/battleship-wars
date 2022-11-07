@@ -59,20 +59,21 @@ letters_to_numbers = {
 
 game_size = 0
 
-while game_size == 0 or game_size <= 3 or game_size > 26:
+while game_size == 0 or game_size <= 4 or game_size > 26:
     try:
-
-        print("Welcome to battleship, please enter a grid size from 8 and 26")
+        print("Welcome to battleship, enter a grid size from 5 to 26,")
         print("keeping in mind the larger the grid the harder the game!")
-        game_size = int(input("Please enter a size: "))
-        if game_size <= 3 or game_size > 26:
-            print("Invalid input, please enter a grid size from 8 and 26!")
+        print("There are 10 battleships to be sunk.")
+        print("Game rules - 'X' is a hit and '-' is a miss.")
+        game_size = int(input("To begin please enter the grid size: "))
+        if game_size <= 4 or game_size > 26:
+            print("Invalid input, please enter a grid size from 5 to 26!")
     except ValueError:
-        print("Invalid input, please enter a grid size from 8 and 26!")
+        print("Invalid input, please enter a grid size from 5 to 26!")
 
 
 def create_ships(board, size):
-    for _ in range(5):
+    for _ in range(10):
         ship_row, ship_column = randint(
             0, size-1), randint(0, size-1)
         while board[ship_row][ship_column] == "X":
@@ -111,8 +112,8 @@ def count_hit_ships(board):
 
 create_grids(game_size)
 create_ships(HIDDEN_BOARD, game_size)
-print(HIDDEN_BOARD)
-turns = 6
+
+turns = 20
 while turns > 0:
     print("Guess a battleship location!")
     print_board(GUESS_BOARD, game_size)
@@ -131,7 +132,7 @@ while turns > 0:
     print("You have " + str(turns) + " turns left.")
     if turns == 0:
         print("you ran out of turns, better luck next time.")
-        print("You have hit ", count_hit_ships(GUESS_BOARD), "ship[s].")
-    if count_hit_ships(GUESS_BOARD) == 5:
+        print("You have hit", count_hit_ships(GUESS_BOARD), "ship[s].")
+    if count_hit_ships(GUESS_BOARD) == 10:
         print("Congratulations, you win!")
         break
