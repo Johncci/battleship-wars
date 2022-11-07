@@ -1,6 +1,6 @@
 from random import randint
 
-# This function represents the user board and hidden board
+# This function represents the user board and hidden board.
 
 
 def create_grids(size):
@@ -9,7 +9,7 @@ def create_grids(size):
     global GUESS_BOARD
     GUESS_BOARD = [[" "] * game_size for i in range(size)]
 
-# This function creates the board layout
+# This function creates the board layout.
 
 
 def print_board(board, size):
@@ -31,6 +31,7 @@ def print_board(board, size):
 
 
 # This allows the letters to be interpretated as numbers
+
 letters_to_numbers = {
     'A': 0,
     'B': 1,
@@ -145,8 +146,10 @@ while turns > 0:
         turns -= 1
     print("You have " + str(turns) + " turns left.")
     if turns == 0:
-        print("you ran out of turns, better luck next time.")
+        print("You ran out of turns, better luck next time.")
         print("You have hit", count_hit_ships(GUESS_BOARD), "ship[s].")
+        print("To play again enter the command: Python3 run.py")
     if count_hit_ships(GUESS_BOARD) == 10:
         print("Congratulations, you win!")
+        print("To play again enter the command: Python3 run.py")
         break
