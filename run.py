@@ -1,5 +1,7 @@
 from random import randint
 
+# This function represents the user board and hidden board
+
 
 def create_grids(size):
     global HIDDEN_BOARD
@@ -7,7 +9,7 @@ def create_grids(size):
     global GUESS_BOARD
     GUESS_BOARD = [[" "] * game_size for i in range(size)]
 
-# credit second half of this function in readme
+# This function creates the board layout
 
 
 def print_board(board, size):
@@ -28,6 +30,7 @@ def print_board(board, size):
         row_number += 1
 
 
+# This allows the letters to be interpretated as numbers
 letters_to_numbers = {
     'A': 0,
     'B': 1,
@@ -57,6 +60,9 @@ letters_to_numbers = {
     'Z': 25
 }
 
+# This is the initial grid creation, opening messages and rules.
+# It also validates the grid size.
+
 game_size = 0
 
 while game_size == 0 or game_size <= 4 or game_size > 26:
@@ -71,6 +77,8 @@ while game_size == 0 or game_size <= 4 or game_size > 26:
     except ValueError:
         print("Invalid input, please enter a grid size from 5 to 26!")
 
+# creates the number of ships on the board.
+
 
 def create_ships(board, size):
     for _ in range(10):
@@ -80,6 +88,8 @@ def create_ships(board, size):
             ship_row, ship_column = randint(
                 0, size-1), randint(0, size-1)
         board[ship_row][ship_column] = "X"
+
+# This is the main game play logic and validation.
 
 
 def get_ship_location(size):
@@ -100,6 +110,8 @@ def get_ship_location(size):
         column = input("Enter the column of the ship: ").upper()
     return int(row) - 1, letters_to_numbers[column]
 
+# This accounts for the hit ships on the board.
+
 
 def count_hit_ships(board):
     count = 0
@@ -112,6 +124,8 @@ def count_hit_ships(board):
 
 create_grids(game_size)
 create_ships(HIDDEN_BOARD, game_size)
+
+# This is the logic for guessing ship location and ending the game
 
 turns = 20
 while turns > 0:
