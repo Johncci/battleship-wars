@@ -72,7 +72,7 @@ while game_size == 0 or game_size <= 4 or game_size > 26:
         print("keeping in mind the larger the grid the harder the game!")
         print("There are 10 battleships to be sunk.")
         print("Game rules - 'X' is a hit and '-' is a miss.")
-        game_size = int(input("To begin please enter the grid size: "))
+        game_size = int(input("To begin please enter the grid size:\n"))
         if game_size <= 4 or game_size > 26:
             print("Invalid input, please enter a grid size from 5 to 26!")
     except ValueError:
@@ -97,14 +97,14 @@ def get_ship_location(size):
     row = 0
     while row < 1 or row > size:
         try:
-            row = int(input("Enter the row of the ship: "))
+            row = int(input("Enter the row of the ship:\n"))
             if row < 1 or row > size:
                 print("Not a relevant choice, please select a valid row")
 
         except ValueError:
             print("Not a relevant choice, please select a valid row")
 
-    column = input("Enter the column of the ship: ").upper().strip()
+    column = input("Enter the column of the ship:\n").upper().strip()
     columns = list("ABCDEFGHIJKLMNOPQRSTUVWXYZ")[: size]
     while column not in columns or len(column) == 0:
         print("Not a relevant choice, please select a valid column")
