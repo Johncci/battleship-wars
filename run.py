@@ -146,10 +146,7 @@ while turns > 0:
         turns -= 1
     print("You have " + str(turns) + " turns left.")
     if turns == 0:
-        print("You ran out of turns, better luck next time.")
         print("You have hit", count_hit_ships(GUESS_BOARD), "ship[s].")
-        print("To play again enter the command: Python3 run.py")
     if count_hit_ships(GUESS_BOARD) == 10:
         print("Congratulations, you win!")
-        print("To play again enter the command: Python3 run.py")
         break
