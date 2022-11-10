@@ -144,9 +144,10 @@ while turns > 0:
         print('You Missed!')
         GUESS_BOARD[row][column] = '-'
         turns -= 1
-    print("You have " + str(turns) + " turns left.")
+    print("You have " + str(turns) + " turn[s] left.")
     if turns == 0:
         print("You have hit", count_hit_ships(GUESS_BOARD), "ship[s].")
     if count_hit_ships(GUESS_BOARD) == 10:
-        print("Congratulations, you win!")
+        print("Congratulations, you have sunk all the battleships!")
+        print_board(GUESS_BOARD, game_size)
         break

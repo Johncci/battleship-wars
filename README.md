@@ -5,7 +5,7 @@
 Battleships is the game where classic game of trying to guess the position of battleships in order to sink them. In this version of the game you play gainst the computer and try to sink all of his battleships. The game is pure python and is displayed in a mock terminal.
 
 
-[View battleship down here]()
+[View battleship-wars here]()
 
 
 ## <u>**Gameplay**</u> ##
@@ -44,15 +44,23 @@ Battleship down is an enjoyable game of chance. In my version of the game, The p
 
  * **Code validation**
 
- * The following are the messages which will be displayed when coordinates are selected in error.
+ * The following are screenshots of the game structure, gameplay and validation messages.
 
-  * 
-
-  * 
-
-  * 
-
-  ![Error messages]()
+![Gameplay structure and validatation messages]()
+![Gameplay structure and validatation messages]()
+![Gameplay structure and validatation messages]()
+![Gameplay structure and validatation messages]()
+![Gameplay structure and validatation messages]()
+![Gameplay structure and validatation messages]()
+![Gameplay structure and validatation messages]()
+![Gameplay structure and validatation messages]()
+![Gameplay structure and validatation messages]()
+![Gameplay structure and validatation messages]()
+![Gameplay structure and validatation messages]()
+![Gameplay structure and validatation messages]()
+![Gameplay structure and validatation messages]()
+![Gameplay structure and validatation messages]()
+![Gameplay structure and validatation messages]()
 
   ## <u>**Testing**</u> ##
 
