@@ -99,15 +99,15 @@ def get_ship_location(size):
         try:
             row = int(input("Enter the row of the ship:\n"))
             if row < 1 or row > size:
-                print("Not a relevant choice, please select a valid row")
+                print("Not a relevant choice, please select a valid row!")
 
         except ValueError:
-            print("Not a relevant choice, please select a valid row")
+            print("Not a relevant choice, please select a valid row!")
 
     column = input("Enter the column of the ship:\n").upper().strip()
     columns = list("ABCDEFGHIJKLMNOPQRSTUVWXYZ")[: size]
     while column not in columns or len(column) == 0:
-        print("Not a relevant choice, please select a valid column")
+        print("Not a relevant choice, please select a valid column!")
         column = input("Enter the column of the ship: ").upper()
     return int(row) - 1, letters_to_numbers[column]
 
@@ -135,18 +135,19 @@ while turns > 0:
     row, column = get_ship_location(game_size)
     GUESS = GUESS_BOARD[row][column]
     if GUESS == '-' or GUESS == 'X':
-        print("You already guessed this location")
+        print("You already guessed this location!")
     elif HIDDEN_BOARD[row][column] == 'X':
-        print("Hit")
+        print("Hit!")
         GUESS_BOARD[row][column] = 'X'
         turns -= 1
     else:
-        print('You Missed')
+        print('You Missed!')
         GUESS_BOARD[row][column] = '-'
         turns -= 1
     print("You have " + str(turns) + " turns left.")
     if turns == 0:
         print("You have hit", count_hit_ships(GUESS_BOARD), "ship[s].")
+        print("if you wish to play again please hit run program.")
     if count_hit_ships(GUESS_BOARD) == 10:
         print("Congratulations, you win!")
         break
