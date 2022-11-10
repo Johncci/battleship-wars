@@ -128,7 +128,7 @@ create_ships(HIDDEN_BOARD, game_size)
 
 # This is the logic for guessing ship location and ending the game.
 
-turns = 20
+turns = 25
 while turns > 0:
     print("Guess a battleship location!")
     print_board(GUESS_BOARD, game_size)
@@ -147,7 +147,6 @@ while turns > 0:
     print("You have " + str(turns) + " turns left.")
     if turns == 0:
         print("You have hit", count_hit_ships(GUESS_BOARD), "ship[s].")
-        print("if you wish to play again please hit run program.")
     if count_hit_ships(GUESS_BOARD) == 10:
         print("Congratulations, you win!")
         break
