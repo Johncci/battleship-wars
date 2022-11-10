@@ -46,7 +46,7 @@ Battleship down is an enjoyable game of chance. In my version of the game, The p
 
  * The following are screenshots of the game structure, gameplay and validation messages.
 
-![Gameplay structure and validatation messages]()
+![Gameplay structure and validatation messages](images/welcome-screen.png)
 ![Gameplay structure and validatation messages]()
 ![Gameplay structure and validatation messages]()
 ![Gameplay structure and validatation messages]()
