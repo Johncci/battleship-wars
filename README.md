@@ -5,13 +5,14 @@
 Battleships is the game where classic game of trying to guess the position of battleships in order to sink them. In this version of the game you play gainst the computer and try to sink all of his battleships. The game is pure python and is displayed in a mock terminal.
 
 
-[View battleship-wars here]()
+[View battleship-wars here](https://battleship-wars-game.herokuapp.com/)
+
+![Am i responsive](images/am-i-responsive-image.png)
 
 
 ## <u>**Gameplay**</u> ##
 
 Battleship down is an enjoyable game of chance. In my version of the game, The player picks a grid size between 5 and 26 squared and then the ships are automatically spread scross the grid. The larger the grid the harder the game. the largest grids are near impossible to beat. For this reason you will receive a count at the end of how many battleships you hit so you can keep score of your best efforts on different sized grids. The aim of the game is to correctly guess a row and a column to find the battleship. The hits are denotated by and 'X' and the misses by a '-'. You get 20 attemps to guess the battleship location and when your turns are used up the game is over unless you have correctly found all ten battleships.
-
 
 
 ## <u>**User experience**</u> ##
@@ -79,7 +80,10 @@ Battleship down is an enjoyable game of chance. In my version of the game, The p
 * The below image is an end of game message. In this case all ships have not been sunk and the users score is displayed. An instruction on how to play again also appears.
 
 ![Gameplay structure and validatation messages](images/ships-hit-end.png)
-![Gameplay structure and validatation messages]()
+
+* The below image is the display when all 10 ships are hit.
+
+![Gameplay structure and validatation messages](images/win-game.png)
 
 
   ## <u>**Testing**</u> ##
