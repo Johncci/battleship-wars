@@ -147,6 +147,7 @@ while turns > 0:
     print("You have " + str(turns) + " turn[s] left.")
     if turns == 0:
         print("You have hit", count_hit_ships(GUESS_BOARD), "ship[s].")
+        print_board(GUESS_BOARD, game_size)
     if count_hit_ships(GUESS_BOARD) == 10:
         print("Congratulations, you have sunk all the battleships!")
         print_board(GUESS_BOARD, game_size)
