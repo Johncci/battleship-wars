@@ -1,8 +1,8 @@
-<h1 align="center">Battleship</h1>
+<h1 align="center">Battleship Wars</h1>
 
 
 ## <U>**Introduction**</U>
-Battleships is the game where classic game of trying to guess the position of battleships in order to sink them. In this version of the game you play gainst the computer and try to sink all of his battleships. The game is pure python and is displayed in a mock terminal.
+Battleship is the classic game of trying to guess the position of battleships in order to sink them. In this version of the game you play gainst the computer and try to sink all of the battleships. The game is pure python and is displayed in a mock terminal provided by code institute.
 
 
 [View battleship-wars here](https://battleship-wars-game.herokuapp.com/)
@@ -12,24 +12,24 @@ Battleships is the game where classic game of trying to guess the position of ba
 
 ## <u>**Gameplay**</u> ##
 
-Battleship down is an enjoyable game of chance. In my version of the game, The player picks a grid size between 5 and 26 squared and then the ships are automatically spread scross the grid. The larger the grid the harder the game. the largest grids are near impossible to beat. For this reason you will receive a count at the end of how many battleships you hit so you can keep score of your best efforts on different sized grids. The aim of the game is to correctly guess a row and a column to find the battleship. The hits are denotated by and 'X' and the misses by a '-'. You get 20 attemps to guess the battleship location and when your turns are used up the game is over unless you have correctly found all ten battleships.
+Battleship wars is an enjoyable game of chance. In my version of the game, The player picks a grid size between 5 and 26 squared and then the ships are automatically spread scross the grid. The larger the grid the harder the game with the largest grids being near impossible to beat. For this reason you will receive a count at the end of how many battleships you hit so you can keep score of your best efforts on different sized grids. The aim of the game is to correctly guess a row and a column to find the battleship. The hits are denotated by and 'X' and the misses by a '-'. You get 23 attempts to guess the battleship location and when your turns are used up the game is over unless you have correctly found all ten battleships.
 
 
 ## <u>**User experience**</u> ##
 
 **User goals**
  * As a user I want to enjoy the game and have fun.
- * As a user I want the game to have difficulty levels that I can set at the start.
+ * As a user I want the game to have varying difficulty levels.
 
 **Project goals**
- * As the game developer I want the user to enjoy the game.
+ * As the game developer I want the user to enjoy the game. The ideal game size in order to beat this game are the lowest grid sizes however I decided to let the grid sizes go up to the length of the alphabet for any user interested in taking on near impossible games to see what they can score in these games. 
  * As the game developer I want the user to want to return to the game.
  * As the game developer I want the game to function with no bugs.
 
 **User stories**
  * As a user I want to be able to understand the rules of the game.
  * As a user I want to be able to view my score.
- * As a user I want to clearly understand when I have won and when i have lost the game.
+ * As a user I want to clearly understand when I have won and when I have lost the game.
  * As a user I want to be able to play the game again.
  
 
@@ -41,15 +41,17 @@ Battleship down is an enjoyable game of chance. In my version of the game, The p
 
 **Code validation**
 
-* The [pep8 validator](http://pep8online.com) is down so I used inbuilt validation to address any major errors in my code. This returned zero problems in the run.py file.
+* The [pep8 validator](http://pep8online.com) is offline so I used inbuilt validation to address any major errors in my code. This returned zero problems in the run.py file.
 
-**Gameplay and inplay validation**
+**Gameplay and input validation**
 
-* The below image is the welcome screen with instructions and the command to enter a grid size form 5 to 26.
+The following are screenshots of each step of the game including input validation. I entered multiple characters throughout the testing of this game and the results always performed as expected. 
+
+* The below image is the welcome screen with instructions and the command to enter a grid size from 5 to 26.
 
 ![Gameplay structure and validatation messages](images/welcome-screen.png)
 
-* The below image is when an invalid gird size outside the paremeters of 5 and 26 is entered. This was tested with multiple inputs and it performed as expected.
+* The below image is when an invalid grid size outside the paremeters of 5 and 26 is entered. This was tested with multiple invalid inputs and it performed as expected.
 
 ![Gameplay structure and validatation messages](images/grid-size-validation.png)
 
@@ -57,7 +59,7 @@ Battleship down is an enjoyable game of chance. In my version of the game, The p
 
 ![Gameplay structure and validatation messages](images/grid-size-selection.png)
 
-* The below image is the validation for an incorrect input for the row option. This was tested with multiple inputs and it performed as expected.
+* The below image is the validation for an incorrect input for the row option. This was tested with multiple invalid inputs and it performed as expected.
 
 ![Gameplay structure and validatation messages](images/row-invalid-choice.png)
 
@@ -65,7 +67,7 @@ Battleship down is an enjoyable game of chance. In my version of the game, The p
 
 ![Gameplay structure and validatation messages](images/column-entry.png)
 
-* The below image is the validation fo an incorrect input in the column option. This was tested with muliple inputs and it performed as expected.
+* The below image is the validation for an incorrect input in the column option. This was tested with muliple invalid inputs and it performed as expected.
 
 ![Gameplay structure and validatation messages](images/column-validation.png)
 
@@ -73,32 +75,40 @@ Battleship down is an enjoyable game of chance. In my version of the game, The p
 
 ![Gameplay structure and validatation messages](images/valid-entry.png)
 
-* The below image is of and 'X appearing on the board as a ship has been correctly guessed and it registers as a hit.
+* The below image is of an 'X' appearing on the board as a ship has been correctly guessed and it registers as a hit.
 
 ![Gameplay structure and validatation messages](images/ship-hit.png)
 
-* The below image is an end of game message. In this case all ships have not been sunk and the users score is displayed. An instruction on how to play again also appears.
+* The below image is an end of game message. In this case all ships have not been hit and the users score is displayed. An instruction on how to play again also appears.
 
 ![Gameplay structure and validatation messages](images/ships-hit-end.png)
 
-* The below image is the display when all 10 ships are hit.
+* The below image is the display when all 10 ships have been hit.
 
 ![Gameplay structure and validatation messages](images/win-game.png)
 
-
-  ## <u>**Testing**</u> ##
-
-  The project was tested throughout the build in the terminal and also by the following methods.
-
-   * The code was tested in the PEP8 linter and displayed no issues.
-   * The game was testeed by entering incorrect coordinates, by entering input that was not a number and also by entering a guess in the same space for a second time.
-   * 
 
 * **Bugs**
 
 I encountered the following bugs during the build of this project.
 
- * 
+ * The guess and hidden board were declaring as local variables which was creating two problems in the terminal. I addresssed this by declaring both as global variables.
+
+
+ ## **Technologies used**
+
+ The following languages and technologies were used and implemented in the build of this project.
+
+  * Python was the language used for the build of this project including the the 'random' imported library in whcih 'randint' was used.
+
+  * VS Studio Code was used to write the python code and to commit and push to GitHub.
+
+  * Git - For version control.
+
+  * Github - To save and store the files for the website construction.
+
+  * Am I Responsive? - To give a visual representation of the game in the provided mock terminal.
+
 
 ## <u>**Deployment**</u> ##
 
@@ -125,4 +135,12 @@ I encountered the following bugs during the build of this project.
 
 ## <u>**Credits**</u> ##
 
+* The project "love sandwiches" for the initial set up and helping me get started.
+* [Knowledge Mavens](https://www.youtube.com/watch?v=tF1WRCrd_HQ) for giving me structure for my game and also I used the join row method displayed in this tutorial.
+* Antonio Rodriguez, my mentor for assisting me in writing this code to fix the column input which was not working - 'columns = list("ABCDEFGHIJKLMNOPQRSTUVWXYZ")[: size].
+
 ## <u>**Acknowledgments**</u> 
+
+* Antonio Rodriguez my mentor for helping me focus on the solutions and not the problems and for also making himself available at short notice if I found myself in need of help.
+* The code institute tutors for patiently helping me through difficult periods as my deadline was approaching.
+* My family for being so patient with me spending untold hours locked in a room working on this project.
