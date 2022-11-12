@@ -46,21 +46,35 @@ Battleship down is an enjoyable game of chance. In my version of the game, The p
 
  * The following are screenshots of the game structure, gameplay and validation messages.
 
+ * The below image is the welcome screen with instructions and the command to enter a grid size form 5 to 26.
+
 ![Gameplay structure and validatation messages](images/welcome-screen.png)
+
+ * The below image is when an invalid gird size outside the paremeters of 5 and 26 is entered. This was tested with multiple inputs and it performed as expected.
+![Gameplay structure and validatation messages](images/grid-size-validation.png)
+
+ * The below image is the grid displayed when a valid grid size has been entered.
+![Gameplay structure and validatation messages](images/grid-size-selection.png)
+
+ * The below image is the validation for an incorrect input for the row option. This was tested with multiple inputs and it performed as expected.
+![Gameplay structure and validatation messages](images/row-invalid-choice.png)
+
+ * The below image is the option to select a valid column entry. 
+![Gameplay structure and validatation messages](images/column-entry.png)
+
+ * The below image is the validation fo an incorrect input in the column option. This was tested with muliple inputs and it performed as expected
+![Gameplay structure and validatation messages](images/column-validation.png)
+
+ * The below image is when a valid input has been entered for both the row and the column. In this case it displays a '-' which is a miss.
+![Gameplay structure and validatation messages](images/valid-entry.png)
+
+ * The below image is of and 'X appearing on the board as a ship has been correctly guessed and it registers as a hit.
+![Gameplay structure and validatation messages](images/ship-hit.png)
+
+* The below image is an end of game message. In this case all ships have not been sunk and the users score is displayed. An instruction on how to play again also appears.
+![Gameplay structure and validatation messages](images/ships-hit-end.png)
 ![Gameplay structure and validatation messages]()
-![Gameplay structure and validatation messages]()
-![Gameplay structure and validatation messages]()
-![Gameplay structure and validatation messages]()
-![Gameplay structure and validatation messages]()
-![Gameplay structure and validatation messages]()
-![Gameplay structure and validatation messages]()
-![Gameplay structure and validatation messages]()
-![Gameplay structure and validatation messages]()
-![Gameplay structure and validatation messages]()
-![Gameplay structure and validatation messages]()
-![Gameplay structure and validatation messages]()
-![Gameplay structure and validatation messages]()
-![Gameplay structure and validatation messages]()
+
 
   ## <u>**Testing**</u> ##
 
