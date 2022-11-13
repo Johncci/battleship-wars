@@ -25,8 +25,11 @@ def print_board(board, size):
 
     row_number = 1
     for row in board:
-        print("%s|%s|" % (" "+str(row_number) if row_number <
-              10 else row_number, "|".join(row)))
+        if row_number < 10:
+            number_row = str(row_number)
+        else:
+            number_row = row_number
+        print(f" {number_row}|{'|'.join(row)}|")
         row_number += 1
 
 # This allows the letters to be interpretated as numbers
@@ -123,32 +126,31 @@ def count_hit_ships(board):
     return count
 
 
-create_grids(game_size)
-create_ships(HIDDEN_BOARD, game_size)
-
-# This is the logic for guessing ship location and ending the game.
-
-turns = 23
-while turns > 0:
-    print("Guess a battleship location!")
-    print_board(GUESS_BOARD, game_size)
-    row, column = get_ship_location(game_size)
-    GUESS = GUESS_BOARD[row][column]
-    if GUESS == '-' or GUESS == 'X':
-        print("You already guessed this location!")
-    elif HIDDEN_BOARD[row][column] == 'X':
-        print("Hit!")
-        GUESS_BOARD[row][column] = 'X'
-        turns -= 1
-    else:
-        print('You Missed!')
-        GUESS_BOARD[row][column] = '-'
-        turns -= 1
-    print("You have " + str(turns) + " turn[s] left.")
-    if turns == 0:
-        print("You have hit", count_hit_ships(GUESS_BOARD), "ship[s].")
+if __name__ == "__main__":
+    create_grids(game_size)
+    create_ships(HIDDEN_BOARD, game_size)
+    # This is the logic for guessing ship location and ending the game.
+    turns = 23
+    while turns > 0:
+        print("Guess a battleship location!")
         print_board(GUESS_BOARD, game_size)
-    if count_hit_ships(GUESS_BOARD) == 10:
-        print("Congratulations, you have sunk all the battleships!")
-        print_board(GUESS_BOARD, game_size)
-        break
+        row, column = get_ship_location(game_size)
+        GUESS = GUESS_BOARD[row][column]
+        if GUESS == '-' or GUESS == 'X':
+            print("You already guessed this location!")
+        elif HIDDEN_BOARD[row][column] == 'X':
+            print("Hit!")
+            GUESS_BOARD[row][column] = 'X'
+            turns -= 1
+        else:
+            print('You Missed!')
+            GUESS_BOARD[row][column] = '-'
+            turns -= 1
+        print("You have " + str(turns) + " turn[s] left.")
+        if turns == 0:
+            print("You have hit", count_hit_ships(GUESS_BOARD), "ship[s].")
+            print_board(GUESS_BOARD, game_size)
+        if count_hit_ships(GUESS_BOARD) == 10:
+            print("Congratulations, you have sunk all the battleships!")
+            print_board(GUESS_BOARD, game_size)
+            break

@@ -2,7 +2,7 @@
 
 
 ## <U>**Introduction**</U>
-Battleship is a game of chance where you try to guess the position of battleships in order to sink them. In this version of the game you play against the computer and try to sink all of the battleships. The game is pure python and is displayed in a mock terminal provided by Code Institute.
+Battleship is a game of chance where you try to guess the position of battleships in order to sink them. In this version of the game you play against the computer and try to sink all of the battleships. This game is targeted at all audiences. Th game battleship holds a nostalgic value for myself and im sure for many others who have played it for many years. The game is still popular both as a boardgame and as an online challenge. The game is pure python and is displayed in a mock terminal provided by Code Institute.
 
 
 [View battleship-wars here](https://battleship-wars-game.herokuapp.com/)
@@ -23,8 +23,8 @@ Battleship wars is an enjoyable game of chance. In my version of the game, The p
 
 **Project goals**
  * As the game developer I want the user to enjoy the game. The ideal game size in order to beat this game are the lowest grid sizes however I decided to let the grid sizes go up to the length of the alphabet for any user interested in taking on near impossible games to see what they can score in these games. 
- * As the game developer I want the user to want to return to the game.
- * As the game developer I want the game to function with no bugs.
+ * As the game developer, I want the user to want to return to the game.
+ * As the game developer, I want the game to function with no bugs.
 
 **User stories**
  * As a user I want to be able to understand the rules of the game.
@@ -88,7 +88,7 @@ The following are screenshots of each step of the game including input validatio
 ![Gameplay structure and validatation messages](images/win-game.png)
 
 
-* **Bugs**
+## **Bugs**
 
 I encountered the following bugs during the build of this project.
 
