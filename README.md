@@ -2,7 +2,7 @@
 
 
 ## <U>**Introduction**</U>
-Battleship is a game of chance where you try to guess the position of battleships in order to sink them. In this version of the game you play against the computer and try to sink all of the battleships. This game is targeted at both people who have played batalship in the past and those who are new to the game. The game battleship holds a nostalgic value for myself and im sure for many others who have played it for many years. The game is still popular both as a board game and as an online challenge. The game is pure python and is displayed in a mock terminal provided by Code Institute.
+Battleship is a game of chance where you try to guess the position of battleships in order to sink them. In this version of the game you play against the computer and try to sink all of the battleships. This game is targeted at both people who have played battleship in the past and those who are new to the game. The game battleship holds a nostalgic value for myself and im sure for many others who have played it for many years. The game is still popular both as a board game and as an online challenge. This  version of the game is pure python and is displayed in a mock terminal provided by Code Institute.
 
 
 [View battleship-wars here](https://battleship-wars-game.herokuapp.com/)
@@ -12,7 +12,7 @@ Battleship is a game of chance where you try to guess the position of battleship
 
 ## <u>**Gameplay**</u> ##
 
-Battleship wars is an enjoyable game of chance. In my version of the game, The player picks a grid size between 5 and 26 squared and then the ships are automatically spread scross the grid. The larger the grid the harder the game with the largest grids being near impossible to beat. For this reason you will receive a count at the end of how many battleships you hit so you can keep score of your best efforts on different sized grids. The aim of the game is to correctly guess a row and a column to find the battleship. The hits are denotated by and 'X' and the misses by a '-'. You get 23 attempts to guess the battleship location and when your turns are used up the game is over unless you have correctly found all ten battleships.
+Battleship wars is an enjoyable game of chance. In my version of the game, The player picks a grid size between 5 and 26 squared and then the ships are automatically spread scross the grid. The larger the grid the harder the game, with the largest grids being near impossible to beat. For this reason you will receive a count at the end of how many battleships you hit so you can keep score of your best efforts on different sized grids. The aim of the game is to correctly guess a row and a column to find the battleship. The hits are denotated by an 'X' and the misses by a '-'. You get 23 attempts to guess the battleship location and when your turns are used up the game is over or you have correctly found all ten battleships before you run out of turns.
 
 
 ## <u>**User experience**</u> ##
@@ -23,13 +23,13 @@ Battleship wars is an enjoyable game of chance. In my version of the game, The p
 
 **Project goals**
  * As the game developer I want the user to enjoy the game. The ideal grid size in order to beat this game are the lowest grid sizes however I decided to let the grid sizes go up to the length of the alphabet for any user interested in taking on near impossible games to see what they can score in these games. 
- * As the game developer, I want the user to want to return to the game.
+ * As the game developer, I want the user to return to play the game.
  * As the game developer, I want the game to function with no bugs.
 
 **User stories**
  * As a user I want to be able to understand the rules of the game.
  * As a user I want to be able to view my score.
- * As a user I want to clearly understand when I have won and when I have lost the game.
+ * As a user I want to clearly understand when I have won the game and if I have not sunk all the battleships then I want to know how many I have hit.
  * As a user I want to be able to play the game again.
  
 
@@ -77,10 +77,6 @@ The following are screenshots of each step of the game including input validatio
 
 ![Gameplay structure and validatation messages](images/column-validation.png)
 
-* The below image is the validation for when the same coordinates are selected for a second time.
-
-![Gameplay structure and validatation messages](images/same-location.png)
-
 * The below image is when a valid input has been entered for both the row and the column. In this case it displays a '-' which is a miss.
 
 ![Gameplay structure and validatation messages](images/valid-entry-miss.png)
@@ -88,6 +84,10 @@ The following are screenshots of each step of the game including input validatio
 * The below image is of an 'X' appearing on the board as a ship has been correctly guessed and it registers as a hit.
 
 ![Gameplay structure and validatation messages](images/valid-entry-hit.png)
+
+* The below image is the validation for when the same coordinates are selected for a second time.
+
+![Gameplay structure and validatation messages](images/same-location.png)
 
 * The below image is an end of game message. In this case all ships have not been hit and the users score is displayed.
 
@@ -109,7 +109,7 @@ I encountered the following bugs during the build of this project.
 
  * The guess and hidden board were declaring as local variables which was creating two problems in the terminal. I addresssed this by declaring both as global variables.
 
- * The letters would not display properly over the grid lines. The solution to this problem was to enter and extra space in the quotes where it declares top_labels in the print_board function.
+ * The letters would not display properly over the grid lines. The solution to this problem was to enter an extra space in the quotes where it declares top_labels in the print_board function.
 
  * The validation of the columns was not working as expected. I used the strip() method to solve this problem and the validation then worked as expected.
 
@@ -120,7 +120,7 @@ I encountered the following bugs during the build of this project.
 
  The following languages and technologies were used and implemented in the build of this project.
 
-  * Python was the language used for the build of this project including the the 'random' imported library in whcih 'randint' was used.
+  * Python was the language used for the build of this project including the the 'random' imported library in which 'randint' was used.
 
   * VS Studio Code was used to write the python code and to commit and push to GitHub.
 
