@@ -2,7 +2,7 @@
 
 
 ## <U>**Introduction**</U>
-Battleship is the classic game of trying to guess the position of battleships in order to sink them. In this version of the game you play gainst the computer and try to sink all of the battleships. The game is pure python and is displayed in a mock terminal provided by code institute.
+Battleship is a game of chance where you try to guess the position of battleships in order to sink them. In this version of the game you play against the computer and try to sink all of the battleships. The game is pure python and is displayed in a mock terminal provided by Code Institute.
 
 
 [View battleship-wars here](https://battleship-wars-game.herokuapp.com/)
@@ -41,7 +41,7 @@ Battleship wars is an enjoyable game of chance. In my version of the game, The p
 
 **Code validation**
 
-* The [pep8 validator](http://pep8online.com) is offline so I used inbuilt validation to address any major errors in my code. This returned zero problems in the run.py file.
+* The [pep8 validator](http://pep8online.com) is offline so I used inbuilt validation to address any major errors in my code. This returned zero errors in the run.py file.
 
 **Gameplay and input validation**
 
@@ -67,21 +67,21 @@ The following are screenshots of each step of the game including input validatio
 
 ![Gameplay structure and validatation messages](images/column-entry.png)
 
-* The below image is the validation for an incorrect input in the column option. This was tested with muliple invalid inputs and it performed as expected.
+* The below image is the validation for an incorrect input in the column option. This was tested with multiple invalid inputs and it performed as expected.
 
 ![Gameplay structure and validatation messages](images/column-validation.png)
 
 * The below image is when a valid input has been entered for both the row and the column. In this case it displays a '-' which is a miss.
 
-![Gameplay structure and validatation messages](images/valid-entry.png)
+![Gameplay structure and validatation messages](images/valid-entry-miss.png)
 
 * The below image is of an 'X' appearing on the board as a ship has been correctly guessed and it registers as a hit.
 
-![Gameplay structure and validatation messages](images/ship-hit.png)
+![Gameplay structure and validatation messages](images/valid-entry-hit.png)
 
-* The below image is an end of game message. In this case all ships have not been hit and the users score is displayed. An instruction on how to play again also appears.
+* The below image is an end of game message. In this case all ships have not been hit and the users score is displayed.
 
-![Gameplay structure and validatation messages](images/ships-hit-end.png)
+![Gameplay structure and validatation messages](images/end-game-ships-hit.png)
 
 * The below image is the display when all 10 ships have been hit.
 
@@ -93,6 +93,10 @@ The following are screenshots of each step of the game including input validatio
 I encountered the following bugs during the build of this project.
 
  * The guess and hidden board were declaring as local variables which was creating two problems in the terminal. I addresssed this by declaring both as global variables.
+
+ * The letters would not display properly over the grid lines. The solution to this problem was to enter and extra space in the quotes where it declares top_labels in the print board function.
+
+ * The validation of the columns was not working as expected. I used the strip() method to solve this problem and the validation then worked as expected.
 
 
  ## **Technologies used**
