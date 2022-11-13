@@ -2,12 +2,12 @@
 
 
 ## <U>**Introduction**</U>
-Battleship is a game of chance where you try to guess the position of battleships in order to sink them. In this version of the game you play against the computer and try to sink all of the battleships. This game is targeted at all audiences. Th game battleship holds a nostalgic value for myself and im sure for many others who have played it for many years. The game is still popular both as a boardgame and as an online challenge. The game is pure python and is displayed in a mock terminal provided by Code Institute.
+Battleship is a game of chance where you try to guess the position of battleships in order to sink them. In this version of the game you play against the computer and try to sink all of the battleships. This game is targeted at both people who have played batalship in the past and those who are new to the game. The game battleship holds a nostalgic value for myself and im sure for many others who have played it for many years. The game is still popular both as a board game and as an online challenge. The game is pure python and is displayed in a mock terminal provided by Code Institute.
 
 
 [View battleship-wars here](https://battleship-wars-game.herokuapp.com/)
 
-![Am i responsive](images/am-i-responsive-image.png)
+![Am I responsive](images/am-i-responsive-image.png)
 
 
 ## <u>**Gameplay**</u> ##
@@ -22,7 +22,7 @@ Battleship wars is an enjoyable game of chance. In my version of the game, The p
  * As a user I want the game to have varying difficulty levels.
 
 **Project goals**
- * As the game developer I want the user to enjoy the game. The ideal game size in order to beat this game are the lowest grid sizes however I decided to let the grid sizes go up to the length of the alphabet for any user interested in taking on near impossible games to see what they can score in these games. 
+ * As the game developer I want the user to enjoy the game. The ideal grid size in order to beat this game are the lowest grid sizes however I decided to let the grid sizes go up to the length of the alphabet for any user interested in taking on near impossible games to see what they can score in these games. 
  * As the game developer, I want the user to want to return to the game.
  * As the game developer, I want the game to function with no bugs.
 
@@ -34,14 +34,20 @@ Battleship wars is an enjoyable game of chance. In my version of the game, The p
  
 
 ## **Design**
- 
 
+* The following image is the logic of the game displayed in a flow chart.
+
+![Flow chart logic](images/flow-chart.png)
+ 
 
 ## **Testing**
 
 **Code validation**
 
 * The [pep8 validator](http://pep8online.com) is offline so I used inbuilt validation to address any major errors in my code. This returned zero errors in the run.py file.
+
+* The following commands were also used as suggested by my mentor to validate this code - 'pip install black' followed by 'python3 -m black run.py'. This returned zero errors in the run.py file.
+
 
 **Gameplay and input validation**
 
@@ -71,6 +77,10 @@ The following are screenshots of each step of the game including input validatio
 
 ![Gameplay structure and validatation messages](images/column-validation.png)
 
+* The below image is the validation for when the same coordinates are selected for a second time.
+
+![Gameplay structure and validatation messages](images/same-location.png)
+
 * The below image is when a valid input has been entered for both the row and the column. In this case it displays a '-' which is a miss.
 
 ![Gameplay structure and validatation messages](images/valid-entry-miss.png)
@@ -87,6 +97,11 @@ The following are screenshots of each step of the game including input validatio
 
 ![Gameplay structure and validatation messages](images/win-game.png)
 
+## **Future features**
+
+ * To create the ships to take up multiple spaces and have different sized battleships.
+ * To place ships on the board and have the computer try to sink your ships.
+
 
 ## **Bugs**
 
@@ -94,9 +109,11 @@ I encountered the following bugs during the build of this project.
 
  * The guess and hidden board were declaring as local variables which was creating two problems in the terminal. I addresssed this by declaring both as global variables.
 
- * The letters would not display properly over the grid lines. The solution to this problem was to enter and extra space in the quotes where it declares top_labels in the print board function.
+ * The letters would not display properly over the grid lines. The solution to this problem was to enter and extra space in the quotes where it declares top_labels in the print_board function.
 
  * The validation of the columns was not working as expected. I used the strip() method to solve this problem and the validation then worked as expected.
+
+ * The logic for starting and finishing the game would not have worked due to not being able to differentiate between run and import. My mentor instructed me to add this line to solve this problem - 'if __name__ == "__main__":'.
 
 
  ## **Technologies used**
@@ -111,7 +128,7 @@ I encountered the following bugs during the build of this project.
 
   * Github - To save and store the files for the website construction.
 
-  * Am I Responsive? - To give a visual representation of the game in the provided mock terminal.
+  * Am I Responsive? - To give a visual representation of the game on different devices in the provided mock terminal.
 
 
 ## <u>**Deployment**</u> ##
@@ -140,11 +157,12 @@ I encountered the following bugs during the build of this project.
 ## <u>**Credits**</u> ##
 
 * The project "love sandwiches" for the initial set up and helping me get started.
-* [Knowledge Mavens](https://www.youtube.com/watch?v=tF1WRCrd_HQ) for giving me structure for my game and also I used the join row method displayed in this tutorial.
+* [Knowledge Mavens](https://www.youtube.com/watch?v=tF1WRCrd_HQ) for giving me structure for my game. 
 * Antonio Rodriguez, my mentor for assisting me in writing this code to fix the column input which was not working - 'columns = list("ABCDEFGHIJKLMNOPQRSTUVWXYZ")[: size].
+* The website [diagrams.net](https://www.diagrams.net/) was used to create the flowchart for this project.
 
 ## <u>**Acknowledgments**</u> 
 
-* Antonio Rodriguez my mentor for helping me focus on the solutions and not the problems and for also making himself available at short notice if I found myself in need of help.
+* Antonio Rodriguez my mentor for helping me focus on the solutions and not the problems and for also making himself available at short notice if I found myself in need of assistance.
 * The code institute tutors for patiently helping me through difficult periods as my deadline was approaching.
 * My family for being so patient with me spending untold hours locked in a room working on this project.
