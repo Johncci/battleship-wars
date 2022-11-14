@@ -2,7 +2,7 @@
 
 
 ## <U>**Introduction**</U>
-Battleship is a game of chance where you try to guess the position of battleships in order to sink them. In this version of the game you play against the computer and try to sink all of the battleships. This game is targeted at both people who have played battleship in the past and those who are new to the game. The game battleship holds a nostalgic value for myself and im sure for many others who have played it for many years. The game is still popular both as a board game and as an online challenge. This  version of the game is pure python and is displayed in a mock terminal provided by Code Institute.
+Battleship is a game of chance where you try to guess the position of battleships in order to sink them. In this version of the game you play against the computer and try to sink all of the battleships. This target audience for this game is mainly those who have played battleship in the past as a board game or online. The game battleship holds a nostalgic value for myself and im sure for many others who have played it for many years. The game is still popular both as a board game and as an online challenge. This  version of the game is pure python and is displayed in a mock terminal provided by Code Institute.
 
 
 [View battleship-wars here](https://battleship-wars-game.herokuapp.com/)
@@ -12,7 +12,7 @@ Battleship is a game of chance where you try to guess the position of battleship
 
 ## <u>**Gameplay**</u> ##
 
-Battleship wars is an enjoyable game of chance. In my version of the game, The player picks a grid size between 5 and 26 squared and then the ships are automatically spread scross the grid. The larger the grid the harder the game, with the largest grids being near impossible to beat. For this reason you will receive a count at the end of how many battleships you hit so you can keep score of your best efforts on different sized grids. The aim of the game is to correctly guess a row and a column to find the battleship. The hits are denotated by an 'X' and the misses by a '-'. You get 23 attempts to guess the battleship location and when your turns are used up the game is over or you have correctly found all ten battleships before you run out of turns.
+Battleship wars is an enjoyable game of chance. In my version of the game, The player picks a grid size between 5 and 26 squared and then the ships are automatically spread across the grid. The larger the grid the harder the game, with the largest grids being near impossible to beat. For this reason you will receive a count at the end of how many battleships you hit so you can keep score of your best efforts on different sized grids. The aim of the game is to correctly guess a row and a column to find the battleship. The hits are denotated by an 'X' and the misses by a '-'. You get 23 attempts to guess the battleship location and when your turns are used up the game is over or you have correctly found all ten battleships before you ran out of turns.
 
 
 ## <u>**User experience**</u> ##
@@ -53,7 +53,7 @@ Battleship wars is an enjoyable game of chance. In my version of the game, The p
 
 The following are screenshots of each step of the game including input validation. I entered multiple characters throughout the testing of this game and the results always performed as expected. 
 
-* The below image is the welcome screen with instructions and the command to enter a grid size from 5 to 26.
+* The below image is the welcome screen with instructions and also has the command to enter a grid size from 5 to 26.
 
 ![Gameplay structure and validatation messages](images/welcome-screen.png)
 
@@ -107,7 +107,7 @@ The following are screenshots of each step of the game including input validatio
 
 I encountered the following bugs during the build of this project.
 
- * The guess and hidden board were declaring as local variables which was creating two problems in the terminal. I addresssed this by declaring both as global variables.
+ * The guess and hidden board were declaring as local variables which was creating two problems in the terminal. I addressed this by declaring both as global variables.
 
  * The letters would not display properly over the grid lines. The solution to this problem was to enter an extra space in the quotes where it declares top_labels in the print_board function.
 
@@ -120,7 +120,7 @@ I encountered the following bugs during the build of this project.
 
  The following languages and technologies were used and implemented in the build of this project.
 
-  * Python was the language used for the build of this project including the the 'random' imported library in which 'randint' was used.
+  * Python was the language used for the build of this project including the 'random' imported library in which 'randint' was used.
 
   * VS Studio Code was used to write the python code and to commit and push to GitHub.
 
